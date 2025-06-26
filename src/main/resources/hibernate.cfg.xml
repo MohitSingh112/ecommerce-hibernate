@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--DB Connection-->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/e_commerce_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">12345678</property>
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Show SQL -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Auto schema update -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Annotated Classes -->
+        <mapping class="com.ecom.model.Product"/>
+        <mapping class="com.ecom.model.Category"/>
+        <mapping class="com.ecom.model.Vendor"/>
+        <mapping class="com.ecom.model.Review"/>
+
+    </session-factory>
+</hibernate-configuration>
