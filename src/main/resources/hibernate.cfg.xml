@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+<!-- all the properties are in the hibernate.properties -->
+
+        <!-- Annotated Classes -->
+        <mapping class="com.ecom.model.Product"/>
+        <mapping class="com.ecom.model.Category"/>
+        <mapping class="com.ecom.model.Vendor"/>
+        <mapping class="com.ecom.model.Review"/>
+
+    </session-factory>
+</hibernate-configuration>
